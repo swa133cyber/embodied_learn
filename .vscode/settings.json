@@ -1,0 +1,8 @@
+{
+    "python-envs.defaultEnvManager": "ms-python.python:conda",
+    "python-envs.defaultPackageManager": "ms-python.python:conda",
+    "python.analysis.stubPath": "C:\\Users\\29075\\.kendryte\\k230_canmv_pylance\\11eea27d1f8b3467\\typings",
+    "python.analysis.extraPaths": [
+        "C:\\Users\\29075\\.kendryte\\k230_canmv_stubs\\f6ca68a0ed02f8d29d27bcf9681581e9f71209bb"
+    ]
+}
