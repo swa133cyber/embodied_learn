@@ -1,0 +1,30 @@
+# Conda 环境配置
+# 创建:   conda env create -f environment.yml
+# 更新:   conda env update -f environment.yml --prune
+# 激活:   conda activate route_learning
+#
+# 注意：环境名必须使用 ASCII 字符。中文环境名（如“路线学习”）会导致
+# Tcl/Tk 找不到 init.tcl，plt.show() 报 _tkinter.TclError。
+name: embody
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  # --- Python 运行时 ---
+  - python=3.14
+  - pip
+
+  # --- 科学计算 / 绘图 ---
+  # 用 matplotlib-base 而不是 matplotlib：前者不含 Qt/PySide，
+  # 体积小得多；配合下面的 tk 即可使用 TkAgg 后端。
+  - numpy
+  - matplotlib-base
+
+  # --- Tk 图形后端（plt.show() 需要，缺少会报 init.tcl 错误）---
+  - tk
+
+  # --- 通过 pip 安装的依赖（暂无需，保留位置）---
+  # - pip:
+  #     - some-package
